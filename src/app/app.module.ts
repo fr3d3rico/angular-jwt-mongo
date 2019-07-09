@@ -3,10 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { CookieService } from 'ngx-cookie-service';
+import { ToolsComponent } from './tools/tools.component';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ToolsComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule
