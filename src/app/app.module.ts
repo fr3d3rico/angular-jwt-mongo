@@ -6,19 +6,19 @@ import { CookieService } from 'ngx-cookie-service';
 
 import { AppComponent } from './app.component';
 import { ToolsComponent } from './tools/tools.component';
-import { UsersComponent } from './users/users.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolsComponent,
-    UsersComponent
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule
   ],
   providers: [CookieService],
-  bootstrap: [AppComponent]
+  bootstrap: [RegisterComponent]
 })
 export class AppModule { }
