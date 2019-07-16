@@ -1,15 +1,16 @@
 <div class="example-container">
   <mat-form-field>
-    <input matInput placeholder="Input">
+    <input matInput placeholder="Name" [(ngModel)]="user.name">
   </mat-form-field>
 
   <mat-form-field>
-    <textarea matInput placeholder="Textarea"></textarea>
+    <input matInput placeholder="Username" [(ngModel)]="user.username">
   </mat-form-field>
 
   <mat-form-field>
-    <mat-select placeholder="Select">
-      <mat-option value="option">Option</mat-option>
-    </mat-select>
+    <input matInput placeholder="Password" type="password" [(ngModel)]="user.password">
   </mat-form-field>
+
+  <button mat-button color="primary" (click)="register()">Register</button>
+
 </div>
