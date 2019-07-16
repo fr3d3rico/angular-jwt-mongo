@@ -1,7 +1,5 @@
 export class User {
-    id: string;
-    title: string;
-    link: string;
-    description: string;
-    tags: string;
+    name: string;
+    username: string;
+    password: string;
 }
