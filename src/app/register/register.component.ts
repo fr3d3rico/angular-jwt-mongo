@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/service/user.service';
 
+import { CookieService } from 'ngx-cookie-service';
+
 import { User } from '../model/user';
 
 @Component({
@@ -16,13 +18,19 @@ export class RegisterComponent implements OnInit {
     password: ''
   };
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private cookieService: CookieService) { }
 
   ngOnInit() {
   }
 
   register() {
-    console.log(this.user);
+    // console.log(this.user);
+    this.userService.registerUser(this.user).subscribe(resp => {
+      console.log(resp);
+      if( resp ) {
+        this.cookieService.set('access_token', resp.access_token);
+      }
+    }, error => console.log(error));
   }
 
 }

@@ -8,9 +8,14 @@ import { Observable } from 'rxjs/internal/Observable';
 })
 export class UserService {
 
+  url = "http://localhost:3030/register";
+
   constructor(private http: HttpClient) { }
 
-  registerUser() {
-    
+  registerUser(user: User): Observable<any> {
+    // console.log('UserService.registerUser(user: User)');
+    return this.http.post(this.url, user, {
+      responseType: 'text'
+    });
   }
 }
