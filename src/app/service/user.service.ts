@@ -18,7 +18,7 @@ export class UserService {
 
     return this.http.post(this.url, user, {
       headers: getHeaders,
-      responseType: 'json'
+      responseType: 'text'
     });
   }
 }

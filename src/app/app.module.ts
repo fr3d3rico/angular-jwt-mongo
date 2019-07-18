@@ -38,6 +38,6 @@ const routes: Routes = [
     MatInputModule
   ],
   providers: [CookieService],
-  bootstrap: [RegisterComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

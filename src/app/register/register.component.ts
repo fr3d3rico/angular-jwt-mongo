@@ -28,17 +28,17 @@ export class RegisterComponent implements OnInit {
   }
 
   register() {
-    // console.log(this.user);
-    // this.userService.registerUser(this.user).subscribe(resp => {
-    //   console.log(resp);
-    //   if( resp ) {
-    //     console.log(resp);
-    //     this.cookieService.set('access_token', resp.access_token);
-    //     this.router.navigate(['/tools']);
-    //   }
-    // }, error => console.log(error));
+    console.log(this.user);
+    this.userService.registerUser(this.user).subscribe(resp => {
+      console.log(resp);
+      if( resp ) {
+        console.log(resp);
+        this.cookieService.set('access_token', resp.access_token);
+        // this.router.navigate(['login']);
+      }
+    }, error => console.log(error));
 
-    this.router.navigate(['tools']);
+    // this.router.navigate(['tools']);
   }
 
 }
