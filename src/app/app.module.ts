@@ -16,8 +16,10 @@ import { RegisterComponent } from './register/register.component';
 import 'hammerjs';
 
 const routes: Routes = [
+  // { path: '', component: AppComponent },
   { path: 'tools', component: ToolsComponent },
-  { path: 'register', component: RegisterComponent }
+  { path: 'register', component: RegisterComponent },
+  // { path: '**', redirectTo: '' }
 ];
 
 @NgModule({

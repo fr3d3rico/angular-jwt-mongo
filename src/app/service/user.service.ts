@@ -17,8 +17,7 @@ export class UserService {
     const getHeaders = new HttpHeaders({'Content-Type': 'application/json'});
 
     return this.http.post(this.url, user, {
-      headers: getHeaders,
-      responseType: 'text'
+      headers: getHeaders
     });
   }
 }
