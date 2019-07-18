@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatSelectModule, MatInputModule } from '@angular/material';
@@ -14,6 +15,11 @@ import { RegisterComponent } from './register/register.component';
 
 import 'hammerjs';
 
+const routes: Routes = [
+  { path: 'tools', component: ToolsComponent },
+  { path: 'register', component: RegisterComponent }
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +27,7 @@ import 'hammerjs';
     RegisterComponent
   ],
   imports: [
+    RouterModule.forRoot(routes),
     FormsModule,
     BrowserModule,
     HttpClientModule,

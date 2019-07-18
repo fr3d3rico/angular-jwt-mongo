@@ -36,3 +36,11 @@ https://www.npmjs.com/package/ngx-cookie-service
 
 angular material 7:
 https://v7.material.angular.io/
+
+
+Understand Preflighted and HTTP 204:
+https://stackoverflow.com/questions/45544064/two-calls-on-post-request-with-http-204-and-200
+https://developer.mozilla.org/en-US/docs/Glossary/Preflight_request
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/204
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag
+https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
