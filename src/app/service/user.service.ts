@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 import { User } from 'src/app/model/user';
+
 import { Observable } from 'rxjs/internal/Observable';
 
 @Injectable({
@@ -14,7 +16,7 @@ export class UserService {
 
   registerUser(user: User): Observable<any> {
     // console.log('UserService.registerUser(user: User)');
-    const getHeaders = new HttpHeaders({'Content-Type': 'application/json'});
+    const getHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
 
     return this.http.post(this.url, user, {
       headers: getHeaders

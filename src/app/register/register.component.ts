@@ -16,27 +16,38 @@ export class RegisterComponent implements OnInit {
 
   user: User = {
     name: '',
-    username: '',
+    email: '',
     password: ''
   };
 
   constructor(private userService: UserService,
-      private cookieService: CookieService,
-      public router: Router) { }
+    private cookieService: CookieService,
+    public router: Router) { }
 
   ngOnInit() {
   }
 
   register() {
-    console.log(this.user);
+    // console.log(this.user);
     this.userService.registerUser(this.user).subscribe(resp => {
-      console.log(resp);
-      if( resp ) {
+      console.log("resp");
+      if (resp.msg) {
+        console.log("if");
         console.log(resp);
-        this.cookieService.set('access_token', resp.access_token);
+        // this.cookieService.set('access_token', resp.access_token);
         // this.router.navigate(['login']);
       }
-    }, error => console.log(error));
+      else {
+        console.log("else");
+        console.log(resp);
+        // this.cookieService.set('access_token', resp.access_token);
+        // this.router.navigate(['login']);
+      }
+    }, error => {
+      console.log("error");
+      console.log(error);
+      this.router.navigate(['login']);
+    });
 
     // this.router.navigate(['tools']);
   }
